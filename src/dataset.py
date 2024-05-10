@@ -70,6 +70,7 @@ class TinyImageNetDatasetModule(LightningDataModule):
 
         return DataLoader(
             dataset,
+            shuffle=True,
             pin_memory=True,
             num_workers=cfg.NUM_WORKERS,
             batch_size=self.batch_size,
