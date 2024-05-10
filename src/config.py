@@ -11,7 +11,7 @@ SCHEDULER_PARAMS    = {'type': 'MultiStepLR', 'milestones': [30, 35], 'gamma': 0
 
 # Dataaset
 DATASET_ROOT_PATH   = 'datasets/'
-NUM_WORKERS         = 8
+NUM_WORKERS         = 16
 
 # Augmentation
 IMAGE_ROTATION      = 20

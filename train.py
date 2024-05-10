@@ -4,6 +4,7 @@
         - For better flexibility, consider using LightningCLI in PyTorch Lightning
 """
 # PyTorch & Pytorch Lightning
+import wandb
 from lightning.pytorch.loggers.wandb import WandbLogger
 from lightning.pytorch.callbacks import LearningRateMonitor, ModelCheckpoint
 from lightning import Trainer
@@ -30,6 +31,7 @@ if __name__ == "__main__":
         batch_size = cfg.BATCH_SIZE,
     )
 
+    wandb.login(key ="277081a38699eac7e601c45a5752e7424b42db34")
     wandb_logger = WandbLogger(
         project = cfg.WANDB_PROJECT,
         save_dir = cfg.WANDB_SAVE_DIR,
